@@ -32,11 +32,11 @@
                 <label id="trois2">F</label> <input type="checkbox" ng-model="trois" ng-change="trois2Fonc()">
             </div>
 
-            <div ng-show="trois" class="animate__animated animate__slideInRight">
+            <div ng-show="trois" class="animate__animated animate__bounce">
                 <button ng-click="valider()" ng-model="valider">Voir vos choix</button>
             </div>
 
-            <div ng-show="valider" class="animate__animated animate__slideInRight">
+            <div ng-show="valider" class="animate__animated animate__animate__backInDown">
                 <h3>{{show}}</h3>
                 <p ng-repeat="l in liste">{{l}}</p>
             </div>
