@@ -1,1 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="lib/angular.js"></script>
+    <script src="controller/index.js"></script>
+    <title>Formulaire progressive</title>
+</head>
+
+<body ng-app="app">
+    <div ng-controller="ctrl">
+        <form>
+
+            <label>Choisissez</label><br>
+            <label id="un1">A </label><input type="checkbox" ng-model="un" ng-change="un1Fonc()">
+            <label id="un2">B </label><input type="checkbox" ng-model="un" ng-change="un2Fonc()">
+
+            <div ng-show="un">
+                <label>Choisissez</label><br>
+                <label id="deux1">C</label> <input type="checkbox" ng-model="deux" ng-change="deux1Fonc()">
+                <label id="deux2">D</label> <input type="checkbox" ng-model="deux" ng-change="deux2Fonc()">
+            </div>
+
+            <div ng-show="deux">
+                <label>Choisissez</label><br>
+                <label id="trois1">E</label> <input type="checkbox" ng-model="trois" ng-change="trois1Fonc()">
+                <label id="trois2">F</label> <input type="checkbox" ng-model="trois" ng-change="trois2Fonc()">
+            </div>
+
+            <div ng-show="trois">
+                <button ng-click="valider()" ng-model="valider">Voir vos choix</button>
+            </div>
+
+            <div ng-show="valider">
+                <h3>{{show}}</h3>
+                <p ng-repeat="l in liste">{{l}}</p>
+            </div>
+
+        </form>
+    </div>
+</body>
+
+</html>
