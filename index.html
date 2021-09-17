@@ -20,23 +20,23 @@
             <label id="un1">A </label><input type="checkbox" ng-model="un" ng-change="un1Fonc()">
             <label id="un2">B </label><input type="checkbox" ng-model="un" ng-change="un2Fonc()">
 
-            <div ng-show="un">
+            <div ng-show="un" class="animate__animated animate__slideInRight">
                 <label>Choisissez</label><br>
                 <label id="deux1">C</label> <input type="checkbox" ng-model="deux" ng-change="deux1Fonc()">
                 <label id="deux2">D</label> <input type="checkbox" ng-model="deux" ng-change="deux2Fonc()">
             </div>
 
-            <div ng-show="deux">
+            <div ng-show="deux" class="animate__animated animate__slideInRight">
                 <label>Choisissez</label><br>
                 <label id="trois1">E</label> <input type="checkbox" ng-model="trois" ng-change="trois1Fonc()">
                 <label id="trois2">F</label> <input type="checkbox" ng-model="trois" ng-change="trois2Fonc()">
             </div>
 
-            <div ng-show="trois">
+            <div ng-show="trois" class="animate__animated animate__slideInRight">
                 <button ng-click="valider()" ng-model="valider">Voir vos choix</button>
             </div>
 
-            <div ng-show="valider">
+            <div ng-show="valider" class="animate__animated animate__slideInRight">
                 <h3>{{show}}</h3>
                 <p ng-repeat="l in liste">{{l}}</p>
             </div>
