@@ -36,6 +36,7 @@ app.controller("ctrl", function ctrl($scope, $http) {
     };
 
     $scope.valider = function() {
+        // alert("show");
         $scope.liste = liste;
         $scope.show = "Voici la liste de vos choix";
     };

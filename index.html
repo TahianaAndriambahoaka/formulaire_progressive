@@ -13,8 +13,8 @@
 </head>
 
 <body ng-app="app">
-    <div ng-controller="ctrl">
-        <form>
+    <div ng-controller="ctrl" class="container-fluid">
+        <form class="form-control">
 
             <label>Choisissez</label><br>
             <label id="un1">A </label><input type="checkbox" ng-model="un" ng-change="un1Fonc()">
@@ -33,10 +33,10 @@
             </div>
 
             <div ng-show="trois" class="animate__animated animate__bounce">
-                <button ng-click="valider()" ng-model="valider">Voir vos choix</button>
+                <input type="button" ng-model="valider" ng-click="valider()" value="Voir vos choix">
             </div>
-
-            <div ng-show="valider" class="animate__animated animate__animate__backInDown">
+            <br><br>
+            <div ng-show="valider">
                 <h3>{{show}}</h3>
                 <p ng-repeat="l in liste">{{l}}</p>
             </div>
